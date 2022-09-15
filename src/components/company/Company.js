@@ -27,6 +27,17 @@ const Company = ({ name }) => {
         onChange={countryChangeHandler}
       />
       <p>Head over to Cognizant {country} website</p>
+
+      <br />
+      <div
+        className="notification"
+        data-testid="successNotification"
+        style={{ backgroundColor: "#00ff00", padding: "10px" }}
+      >
+        Data Saved...!
+      </div>
+
+      <button role="buttonClick" className="btn-danger">Danger Button</button>
     </div>
   );
 };

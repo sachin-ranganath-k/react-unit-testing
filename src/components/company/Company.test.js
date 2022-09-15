@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
 import Company from "./Company";
 
 describe("Company component", () => {
@@ -38,6 +39,7 @@ describe("Company component", () => {
       },
     });
     expect(countryInput.value).toBe("Australia");
+    expect(screen.getByText("Head over to Cognizant Australia website"));
 
     fireEvent.change(countryInput, {
       target: {
@@ -45,5 +47,35 @@ describe("Company component", () => {
       },
     });
     expect(countryInput.value).toBe("UK");
+    expect(screen.getByText("Head over to Cognizant UK website"));
+  });
+
+  //Testing inline css
+  it("css style with bg color green", () => {
+    render(<Company />);
+    expect(screen.getByTestId("successNotification")).toHaveStyle(
+      "background-color:#00ff00"
+    );
+  });
+
+  //testing element with css class
+  it("css style with class", () => {
+    render(<Company />);
+    expect(screen.getByTestId("successNotification")).toHaveClass(
+      "notification"
+    );
+  });
+
+  //testing button css with class
+  it("css style with class of button", () => {
+    render(<Company />);
+    expect(screen.getByRole("buttonClick")).toHaveClass("btn-danger");
+  });
+
+  //snapshot testing
+  it("snapshot testing", () => {
+    //npm i react-test-renderer
+    const snapshotJSON = renderer.create(<Company name="Cognizant Technology Solutions" />);
+    expect(snapshotJSON).toMatchSnapshot();
   });
 });
