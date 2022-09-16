@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Company from './components/company/Company';
+import Counter from './components/Counter/Counter';
 
 function App() {
   return (
@@ -9,6 +10,8 @@ function App() {
      <p>Hello</p>
 
      <Company name="Cognizant Technology Solutions"/>
+     <hr />
+     <Counter />
     </div>
   );
 }
