@@ -15,7 +15,7 @@ describe('Counter Component',()=>{
 
         //get increment and decrement buttons
          const incrementBtn=screen.getByTestId('incrementBtn');
-        const decrementBtn=screen.getByTestId('decrementBtn');
+         const decrementBtn=screen.getByTestId('decrementBtn');
 
         //before increment or decrement, check default counter is 0
         expect(counterValueElement.textContent).toBe('0')
@@ -27,9 +27,18 @@ describe('Counter Component',()=>{
 
         fireEvent.click(decrementBtn);
         fireEvent.click(decrementBtn);
-        expect(counterValueElement.textContent).toBe('0')
+        expect(counterValueElement.textContent).toBe('0');
 
+      
+        for(var i=0;i<11;i++){
+            fireEvent.click(incrementBtn);
+        }
+        expect(counterValueElement.textContent).toBe('10') //condition is there in counter.js
 
-
+        for(var i=10; i>0; i--){
+            fireEvent.click(decrementBtn);
+        }
+        expect(counterValueElement.textContent).toBe('0') //condition is there in counter.js
+    
     })
 })
