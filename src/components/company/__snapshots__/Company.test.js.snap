@@ -1,58 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Company component  1`] = `
-<div>
-  <h2>
-    Company | Testing props, Events, States, Hooks, Props, CSS, JSX, Snapshot
-  </h2>
-  <h3
-    data-testid="companyName"
-  >
-    cognizant's official website
-  </h3>
-  <h4
-    data-testid="companyFullName"
-  >
-    Company name : 
-    Cognizant Technology Solutions
-  </h4>
-  <br />
-  <label>
-    Enter your country :
-  </label>
-  <input
-    onChange={[Function]}
-    placeholder="Enter Country"
-    type="text"
-    value="India"
-  />
-  <p>
-    Head over to Cognizant 
-    India
-     website
-  </p>
-  <br />
-  <div
-    className="notification"
-    data-testid="successNotification"
-    style={
-      Object {
-        "backgroundColor": "#00ff00",
-        "padding": "10px",
-      }
-    }
-  >
-    Data Saved...!
-  </div>
-  <button
-    className="btn-danger"
-    role="buttonClick"
-  >
-    Danger Button
-  </button>
-</div>
-`;
-
 exports[`Company component snapshot testing 1`] = `
 <div>
   <h2>
@@ -80,7 +27,7 @@ exports[`Company component snapshot testing 1`] = `
     value="India"
   />
   <p>
-    Head over to Cognizant 
+    Go to Cognizant 
     India
      website
   </p>

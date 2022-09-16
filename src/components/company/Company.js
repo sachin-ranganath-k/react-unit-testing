@@ -26,7 +26,7 @@ const Company = ({ name }) => {
         value={country}
         onChange={countryChangeHandler}
       />
-      <p>Head over to Cognizant {country} website</p>
+      <p>Go to Cognizant {country} website</p>
 
       <br />
       <div

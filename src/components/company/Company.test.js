@@ -35,35 +35,31 @@ describe("Company component", () => {
 
     fireEvent.change(countryInput, {
       target: {
-        value: "Australia",
+        value: "France",
       },
     });
-    expect(countryInput.value).toBe("Australia");
-    expect(screen.getByText("Head over to Cognizant Australia website"));
+    expect(countryInput.value).toBe("France");
+    expect(screen.getByText("Go to Cognizant France website"));
 
     fireEvent.change(countryInput, {
       target: {
-        value: "UK",
+        value: "USA",
       },
     });
-    expect(countryInput.value).toBe("UK");
-    expect(screen.getByText("Head over to Cognizant UK website"));
+    expect(countryInput.value).toBe("USA");
+    expect(screen.getByText("Go to Cognizant USA website"));
   });
 
   //Testing inline css
   it("css style with bg color green", () => {
     render(<Company />);
-    expect(screen.getByTestId("successNotification")).toHaveStyle(
-      "background-color:#00ff00"
-    );
+    expect(screen.getByTestId("successNotification")).toHaveStyle("background-color:#00ff00");
   });
 
   //testing element with css class
   it("css style with class", () => {
     render(<Company />);
-    expect(screen.getByTestId("successNotification")).toHaveClass(
-      "notification"
-    );
+    expect(screen.getByTestId("successNotification")).toHaveClass("notification");
   });
 
   //testing button css with class
