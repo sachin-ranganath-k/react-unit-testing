@@ -3,6 +3,8 @@ import './App.css';
 import Company from './components/company/Company';
 import Counter from './components/Counter/Counter';
 import Todo from './components/Todo/Todo';
+import ContactForm from './components/ContactForm/ContactForm';
+import Users from './components/Users/Users';
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
      <Counter />
      <hr />
      <Todo />
+     <hr />
+     <ContactForm />
+     <hr />
+     <Users />
     </div>
   );
 }
