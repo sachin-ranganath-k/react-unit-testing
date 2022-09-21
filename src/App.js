@@ -5,6 +5,7 @@ import Counter from './components/Counter/Counter';
 import Todo from './components/Todo/Todo';
 import ContactForm from './components/ContactForm/ContactForm';
 import Users from './components/Users/Users';
+import Posts from './components/Posts/Posts';
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
      <ContactForm />
      <hr />
      <Users />
+     <hr />
+     <Posts />
     </div>
   );
 }
